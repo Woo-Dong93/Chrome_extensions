@@ -9,13 +9,12 @@
 ### 1. 초기 셋팅
 
 - react
+  - react-frame-component, prop-types : iframe을 활용하기 위한 라이브러리 입니다.
+    - 직접 클라이언트 화면에 태그를  추가하는 방식이다보니 CSS영향을 받게 되어서 그 부분을 개선하고자 iframe을 활용했습니다.
 
 ```
 npm i react react-dom react-frame-component prop-types
 ```
-
-		- react-frame-component, prop-types : iframe을 활용하기 위한 라이브러리 입니다.
-		- 직접 클라이언트 화면에 태그를  추가하는 방식이다보니 CSS영향을 받게 되어서 그 부분을 개선하고자 iframe을 활용했습니다.
 
 
 
@@ -28,6 +27,9 @@ npm i -D @babel/cli @babel/core @babel/preset-env @babel/preset-react babel-load
 
 
 - webpack
+  - html-webpack-plugin : html 파일을 공백없이 번들링 해줍니다.
+  - style-loader, css-loader : .css 파일을 import 할 수 있으며 번들링 해줍니다.
+  - copy-webpack-plugin : 그 외에 기타파일을 웹팩 결과물과 함께 그대로 가지고 올 수 있습니다.
 
 ```
 npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin
@@ -36,10 +38,6 @@ npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 ```
 npm i -D style-loader css-loader copy-webpack-plugin
 ```
-
-- html-webpack-plugin : html 파일을 공백없이 번들링 해줍니다.
-- style-loader, css-loader : .css 파일을 import 할 수 있으며 번들링 해줍니다.
-- copy-webpack-plugin : 그 외에 기타파일을 웹팩 결과물과 함께 그대로 가지고 올 수 있습니다.
 
 
 
@@ -90,7 +88,7 @@ npm i @types/chrome
 
 - webpack.config.js
 
-```json
+```javascript
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -149,7 +147,6 @@ module.exports = {
     historyApiFallback: true,
   },
 };
-
 ```
 
 
